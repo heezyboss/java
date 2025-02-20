@@ -66,27 +66,63 @@
 
         // let result = prompt("input number", 5);
         // alert(result ** 2);
-        function insertionSort(arr) {
-            let n = arr.length;
+        // function insertionSort(arr) {
+        //     let n = arr.length;
 
-            for (let i = 1; i < n; i++) {
-                let current = arr[i];
-                let j = i - 1;
+        //     for (let i = 1; i < n; i++) {
+        //         let current = arr[i];
+        //         let j = i - 1;
 
-                // Move elements that are greater than current one position ahead
-                while (j >= 0 && arr[j] > current) {
-                    arr[j + 1] = arr[j];
-                    j--;
+        //         // Move elements that are greater than current one position ahead
+        //         while (j >= 0 && arr[j] > current) {
+        //             arr[j + 1] = arr[j];
+        //             j--;
+        //         }
+        //         arr[j + 1] = current;
+        //     }
+
+        //     return arr;
+        // }
+
+        // // Example usage:
+        // let arr = [12, 11, 13, 5, 6];
+        // console.log("Sorted Array:", insertionSort(arr));
+
+        function analyzeSentence(sentence) {
+            let length = 0;
+            let wordCount = 0;
+            let vowelCount = 0;
+            let vowels = "aeiouAEIOU";
+            let inWord = false;
+
+            for (let i = 0; i < sentence.length; i++) {
+                let char = sentence[i];
+                length++; // Count each character
+
+                // Count vowels
+                if (vowels.includes(char)) {
+                    vowelCount++;
                 }
-                arr[j + 1] = current;
+
+                // Count words (assuming words are separated by a single space)
+                if (char !== ' ' && char !== '.') {
+                    if (!inWord) {
+                        wordCount++;
+                        inWord = true;
+                    }
+                } else {
+                    inWord = false;
+                }
             }
 
-            return arr;
+            console.log("Sentence Length:", length);
+            console.log("Word Count:", wordCount);
+            console.log("Vowel Count:", vowelCount);
         }
 
-        // Example usage:
-        let arr = [12, 11, 13, 5, 6];
-        console.log("Sorted Array:", insertionSort(arr));
+        // Example usage
+        let sentence = "This is a sample sentence.";
+        analyzeSentence(sentence);
 
     </script>
 </body>
