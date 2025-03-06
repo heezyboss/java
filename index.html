@@ -24,69 +24,68 @@
         // alert
 
         /* multiple lines 
-//         comment
-//         here */
+       comment
+       here */
+        //Variables
 
-        //         //Variables
+        // using let
+        // using var
+        // using const
 
-        //         // using let
-        //         // using var
-        //         // using const
+        let name;
 
-        //         let name;
+        name = 'brian'
+        name = 'heezy'
 
-        //         name = 'brian'
-        //         name = 'heezy'
+        let name2 = 'Jon Doe'
+        name2 = 'another'
 
-        //         let name2 = 'Jon Doe'
-        //         name2 = 'another'
+        // declaring & initializing a variable
+        let count = 10
 
-        //         // declaring & initializing a variable
-        //         let count = 10
+        count = 30;
+        console.log({ count });
 
-        //         count = 30;
-        //         console.log({ count });
+        ------------------------------------
+        // using const
+        const person = "k";
+        console.log({ person });
+        person = "p";
+        console.log({ person });
 
-        //         ------------------------------------
-        // // using const
-        // const person = "k";
-        //         console.log({ person });
-        //         person = "p";
-        //         console.log({ person });
+        // data Types
+        strings, number, boolea, null, undefined, bigint, symbol(primitve)
+        object(non - primitve)
 
-        //         // data Types
-        // strings, number, boolea, null, undefined, bigint, symbol (primitve)
-        // object (non-primitve)
-
-        // let expenses = prompt("input expenses margin");
-        // let capital = prompt("input capital margin");
-        // let OperationalCost = Number(expenses) + Number(capital);
-        // alert(OperationalCost);
+        let expenses = prompt("input expenses margin");
+        let capital = prompt("input capital margin");
+        let OperationalCost = Number(expenses) + Number(capital);
+        alert(OperationalCost);
 
 
-        // let result = prompt("input number", 5);
-        // alert(result ** 2);
-        // function insertionSort(arr) {
-        //     let n = arr.length;
+        let result = prompt("input number", 5);
+        alert(result ** 2);
+        function insertionSort(arr) {
+            let n = arr.length;
 
-        //     for (let i = 1; i < n; i++) {
-        //         let current = arr[i];
-        //         let j = i - 1;
+            for (let i = 1; i < n; i++) {
+                let current = arr[i];
+                let j = i - 1;
 
-        //         // Move elements that are greater than current one position ahead
-        //         while (j >= 0 && arr[j] > current) {
-        //             arr[j + 1] = arr[j];
-        //             j--;
-        //         }
-        //         arr[j + 1] = current;
-        //     }
+                // Move elements that are greater than current one position ahead
+                while (j >= 0 && arr[j] > current) {
+                    arr[j + 1] = arr[j];
+                    j--;
+                }
+                arr[j + 1] = current;
+            }
 
-        //     return arr;
-        // }
+            return arr;
+        }
 
-        // // Example usage:
-        // let arr = [12, 11, 13, 5, 6];
-        // console.log("Sorted Array:", insertionSort(arr));
+        // Example usage:
+        let arr = [12, 11, 13, 5, 6];
+        console.log("Sorted Array:", insertionSort(arr));
 
         function analyzeSentence(sentence) {
             let length = 0;
@@ -123,6 +122,329 @@
         // Example usage
         let sentence = "This is a sample sentence.";
         analyzeSentence(sentence);
+
+
+        let num = "K" < "k";
+
+
+        console.log({ num });
+        let a = 9;
+        let b = 0;
+
+        let res = a || b;
+        console.log({ res });
+
+        function calculateprofit(income, expenses) {
+            let profit = income - expenses;
+            // console.log({ profit });
+            // return profit;
+        }
+        let res = calculateprofit(5000000, 1500000)
+        console.log({ res });
+        calculateprofit(1000000, 500000)
+        calculateprofit(2000000, 500000)
+        calculateprofit(3000000, 500000)
+        calculateprofit(4000000, 500000)
+        calculateprofit(4000000, 500000)
+
+        function celsiusToFahrenheit(celsius) {
+            return (celsius * 9 / 5) + 32;
+
+        }
+        let celsiusInput = prompt("enter celsius value")
+
+        // Convert input to a number and check if it's valid
+        if (!isNaN(celsiusInput) && celsiusInput !== null) {
+            let fahrenheit = celsiusToFahrenheit(parseFloat(celsiusInput));
+            console.log(`${celsiusInput}°C is equal to ${fahrenheit.toFixed(2)}°F`);
+        } else {
+            console.log("Please enter a valid number.");
+        }
+        // console.log(celsiusToFahrenheit(6));
+        console.log(celsiusToFahrenheit(100));
+        console.log(celsiusToFahrenheit(32));
+
+        assign a grade to a student based on their marks
+
+        70 - 100 = A
+        60 - 69 = B
+        50 - 59 = C
+        40 - 49 = D
+        0 - 39 = E  
+
+        Get Marks from the user
+        Assign Grade 
+        Print grade to the user
+
+        function studentGrade(A, B, C, D, E) {
+            return (A, B, C, D, E);
+        }
+
+        let studentAggregateScore = prompt("Input Student Aggregate Scores");
+
+        let studentScore;
+
+        if (!isNaN(studentAggregateScore) && studentAggregateScore !== null) {
+            if
+                (studentAggregateScore >= 70 && studentAggregateScore <= 100) {
+                studentScore = "A";
+            }
+            else if
+                (studentAggregateScore >= 60 && studentAggregateScore <= 69) {
+                studentScore = "B";
+            }
+            else if
+                (studentAggregateScore >= 50 && studentAggregateScore <= 59) {
+                studentScore = "C";
+            }
+            else if
+                (studentAggregateScore >= 40 && studentAggregateScore <= 49) {
+                studentScore = "D";
+            }
+            else if
+                (studentAggregateScore >= 0 && studentAggregateScore <= 39) {
+                studentScore = "E";
+            }
+
+            else {
+                alert("Invalid Input");
+
+            }
+        }
+
+        alert({ studentScore });
+
+        let trafficInput = prompt("Input Traffic Light Colour");
+
+        let trafficLight;
+
+        if (trafficInput !== null) {
+            if
+                ((trafficInput === "Green") ||
+                (trafficInput === "green")) {
+                trafficLight = "Go";
+            }
+            else if
+                (trafficInput === "Yellow") {
+                trafficLight = "Ready";
+            }
+            else if
+                (trafficInput === "Red") {
+                trafficLight = "Stop";
+            }
+        }
+        else {
+            console.log("Invalid Input")
+
+        }
+
+        console.log({ trafficLight })
+
+        let trafficLight = prompt("Input Traffic Light Color")
+        switch (trafficLight) {
+            case 'Green':
+            case 'green':
+                alert("Go");
+                break;
+
+            case 'Yellow':
+            case 'yellow':
+                alert("Ready");
+                break;
+
+            case 'Red':
+            case 'red':
+                alert("Stop");
+                break;
+
+            default:
+                alert('Not a valid input');
+        }
+
+        let tempValue = (parseInt(prompt("What is the current temperature?")));
+        switch (true) {
+
+            case tempValue >= 20 && tempValue <= 29.9: {
+                alert("Temperature is pleasant");
+                break;
+            }
+
+            case tempValue >= 30: {
+                alert("It is hot outside");
+                break;
+            }
+
+            case tempValue < 19.9: {
+                alert("Temperature is cold");
+                break;
+            }
+
+            default: {
+                alert('Not a valid input');
+            }
+        }
+
+        let studentAggregateScore = (parseInt(prompt("Input Student Aggregate Scores")));
+
+        let studentScore;
+
+        switch (true) {
+            case studentAggregateScore >= 70 && studentAggregateScore <= 100:
+                studentScore = "A";
+                break;
+
+            case studentAggregateScore >= 60 && studentAggregateScore <= 69:
+                studentScore = "B";
+                break;
+
+            case
+                studentAggregateScore >= 50 && studentAggregateScore <= 59:
+                studentScore = "C";
+                break;
+
+            case
+                studentAggregateScore >= 40 && studentAggregateScore <= 49:
+                studentScore = "D";
+                break;
+
+            case
+                studentAggregateScore >= 0 && studentAggregateScore <= 39:
+                studentScore = "E";
+                break;
+
+
+            default:
+                alert("Invalid Input");
+
+        }
+
+        alert(studentScore);
+
+        let counter = prompt("input count");
+        while (counter > 5) {
+            console.log(counter);
+            counter + 1;
+        }
+        let counter = prompt("enter counter");
+        while (counter <= 10) {
+            alert("alert");
+            counter++;
+        }
+
+        do {
+            console.log(counter);
+            counter++;
+        } while (counter <= 10)
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+        /*  write a simple "guess the number" game where the user has to guess a number between 1 and 10 using do while loop to keep asking untill its right */
+
+        const secretNumber = Math.floor(Math.random() * 10) + 1;
+
+        let secretNumber = 6
+
+        let guess;
+
+        do {
+            guess = parseInt(prompt("Guess a number between 1 and 10: "))
+
+            if (guess < secretNumber) {
+                console.log("Too low! Try again.");
+            } else if (guess > secretNumber) {
+                console.log("Too high! Try again.");
+            } else if (guess === secretNumber) {
+                console.log("Congratulations! You guessed the correct number.");
+            } else {
+                console.log("Invalid input! Please enter a number.");
+            }
+        } while (guess !== secretNumber);
+
+        while (guess !== secretNumber) {
+            guess = parseInt(prompt("Guess a number between 1 and 10: "))
+
+            if (guess < secretNumber) {
+                console.log("Too low! Try again.");
+            } else if (guess > secretNumber) {
+                console.log("Too high! Try again.");
+            } else if (guess === secretNumber) {
+                console.log("Congratulations! You guessed the correct number.");
+            } else {
+                console.log("Invalid input! Please enter a number.");
+            }
+        }
+
+        let num = 1;
+
+        while (num <= 20) {
+            num / 2
+
+            // num += 1;
+        }
+
+        let num = [500, "name", true, 400, 900];
+        console.log({ num });
+        num[2] = 33;
+        console.log({ num });
+        let num3 = num;
+        num3[2] = 199;
+        console.log({ num3 })
+        console.log({ num3 })
+        console.log({ length: num.length })
+
+        let num = [];
+        num.push("give")
+        num.push(false)
+        num.push(889)
+        console.log({ num })
+        num.pop()
+        console.log({ num })
+
+        console.log({ type: typeof num });
+        console.log(num[2]);
+        let item2 = num[6];
+        console.log(item2)
+
+        let num = [1, 2, 3];
+        let num2 = []
+        for (let i = 0; i < num.length; i++) {
+            let result = (i + 1) * (i + 1);
+            num2.push(result);
+        }
+        console.log({ num })
+        console.log({ num2 })
+
+        let num = [1, 2, 3];
+        let num2 = num.map((item) => item * item);
+        console.log({ num })
+        console.log({ num2 })
+
+        let prices = [200, 500, 800, 150];
+        let discount = prices.map((item) => item * 0.8);
+
+        console.log({ prices });
+        console.log({ discount });
+
+        let values = ["a", 0, true, "a", 75, false];
+        let valueplus = values.find((item) => item === "a");
+
+        console.log({ valueplus });
+
+        let person = {
+            1: "Brian",
+            adm_no: "2025/cs00342/30",
+            course: "comp.sci",
+            dob: "16/07/2000",
+            gender: "male",
+            canRegister: function () {
+                console.log("Can Register");
+            },
+            canTakeExam: function () {
+                console.log("Can Take Exam");
+            },
+        };
+        console.log(person);
 
     </script>
 </body>
